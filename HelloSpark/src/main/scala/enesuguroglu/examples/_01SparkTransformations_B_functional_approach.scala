@@ -9,7 +9,7 @@ import scala.io.Source
 // This examples show defining configuration in seperate files and loading
 // Using getSparkAppConf udf
 
-object _01SparkTransformations extends Serializable {
+object _01SparkTransformations_B_functional_approach extends Serializable {
 
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
   def main(args: Array[String]): Unit = {
@@ -34,19 +34,31 @@ object _01SparkTransformations extends Serializable {
       .config(getSparkAppConf)
       .getOrCreate()
 
-    val surveyDF = loadSurveyDF(spark, args(0))
+    val surveyDf = loadSurveyDF(spark, args(0))
 
-    val countDf = surveyDF.where("Age < 40")
-      .select("Age", "Gender", "Country", "state")
-      .groupBy("Country")
-      .count()
+    // We can repartition data to simulate read by cluster in local machine test
+    val partitionedsurveyDf = surveyDf.repartition(2)
 
+    val countDf = countByCountry(partitionedsurveyDf)
+
+    logger.info(countDf.collect().mkString("->"))
     countDf.show()
 
     logger.info("spark.conf=" + spark.conf.getAll.toString())
     //Process your data
     logger.info("Finished Hello Spark")
+    // Below code is work around to observe sparkui because
+    // That code will does not allow spark session to finish
+    // Remove this code later, this is debugging only
+    scala.io.StdIn.readLine()
     spark.stop()
+  }
+
+  def countByCountry(df: DataFrame): DataFrame = {
+    df.where("Age < 40")
+      .select("Age", "Gender", "Country", "state")
+      .groupBy("Country")
+      .count()
   }
 
   def loadSurveyDF(spark: SparkSession, dataFile: String) : DataFrame = {

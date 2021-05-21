@@ -1,3 +1,4 @@
-21/05/21 20:41:54 INFO HelloSpark2$: Starting Hello Spark
-21/05/21 20:42:04 INFO HelloSpark2$: spark.conf=Map(spark.driver.host -> ENES, spark.driver.port -> 25655, spark.app.name -> Hello Spark, spark.executor.id -> driver, spark.yarn.app.container.log.dir -> app-logs, spark.master -> local[3], spark.app.id -> local-1621618920674)
-21/05/21 20:42:04 INFO HelloSpark2$: Finished Hello Spark
+21/05/21 23:05:27 INFO _01SparkTransformations_B_functional_approach$: Starting Hello Spark
+21/05/21 23:05:38 INFO _01SparkTransformations_B_functional_approach$: [United Kingdom,1]->[Canada,2]->[United States,4]
+21/05/21 23:05:38 INFO _01SparkTransformations_B_functional_approach$: spark.conf=Map(spark.driver.host -> ENES, spark.driver.port -> 26979, spark.app.name -> Hello Spark, spark.executor.id -> driver, spark.yarn.app.container.log.dir -> app-logs, spark.master -> local[3], spark.app.id -> local-1621627533470, spark.sql.shuffle.partitions -> 2)
+21/05/21 23:05:38 INFO _01SparkTransformations_B_functional_approach$: Finished Hello Spark
