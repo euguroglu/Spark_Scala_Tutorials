@@ -3,4 +3,3 @@ HelloSpark show how to start and stop spark session and basic configuration usin
 2)HelloSpark2
 HelloSpark2 shows how to start and stop spark session and configuration using SparkConf object
 Hellospark2 shows how to read csv data in dataframe format
-Note that we put read csv code as function outside of the main function

@@ -2,7 +2,7 @@ package enesuguroglu.examples
 
 import org.apache.log4j.Logger
 import org.apache.spark.SparkConf
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 import java.util.Properties
 import scala.io.Source
@@ -13,7 +13,14 @@ object HelloSpark2 extends Serializable {
 
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
   def main(args: Array[String]): Unit = {
+
+    // Logger to check if data is there
+    if (args.length == 0) {
+      logger.error("Usage: HelloSpark filename")
+      System.exit(1)
+    }
     logger.info("Starting Hello Spark")
+
     /* Alternative to define configuration
     val sparkAppConf = new SparkConf()
     sparkAppConf.set("spark.app.name", "Hello Spark")
@@ -27,10 +34,20 @@ object HelloSpark2 extends Serializable {
       .config(getSparkAppConf)
       .getOrCreate()
 
+    val surveyDF = loadSurveyDF(spark, args(0))
+    surveyDF.show()
+
     logger.info("spark.conf=" + spark.conf.getAll.toString())
     //Process your data
     logger.info("Finished Hello Spark")
     spark.stop()
+  }
+
+  def loadSurveyDF(spark: SparkSession, dataFile: String) : DataFrame = {
+    spark.read
+      .option("header", "true")
+      .option("inferSchema", "true")
+      .csv(dataFile)
   }
 
   def getSparkAppConf: SparkConf = {
