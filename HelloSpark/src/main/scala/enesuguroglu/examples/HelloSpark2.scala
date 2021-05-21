@@ -1,11 +1,15 @@
 package enesuguroglu.examples
 
 import org.apache.log4j.Logger
+import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
 
+import java.util.Properties
+import scala.io.Source
+// This examples show defining configuration in seperate files and loading
+// Using getSparkAppConf udf
 
-
-object HelloSpark extends Serializable {
+object HelloSpark2 extends Serializable {
 
   @transient lazy val logger: Logger = Logger.getLogger(getClass.getName)
   def main(args: Array[String]): Unit = {
@@ -20,13 +24,22 @@ object HelloSpark extends Serializable {
       .getOrCreate()
   */
     val spark = SparkSession.builder()
-      .appName("Hello Spark")
-      .master("local[3]")
+      .config(getSparkAppConf)
       .getOrCreate()
 
+    logger.info("spark.conf=" + spark.conf.getAll.toString())
     //Process your data
     logger.info("Finished Hello Spark")
     spark.stop()
   }
 
+  def getSparkAppConf: SparkConf = {
+    val sparkAppConf = new SparkConf
+    //set all spark configs
+    val props = new Properties
+    props.load(Source.fromFile("spark.conf").bufferedReader())
+    props.forEach((k,v) => sparkAppConf.set(k.toString, v.toString))
+
+    sparkAppConf
+  }
 }

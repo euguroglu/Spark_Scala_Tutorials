@@ -1,0 +1,4 @@
+1)HelloSpark
+HelloSpark show how to start and stop spark session and basic configuration using builder
+2)HelloSpark2
+HelloSpark2 shows how to start and stop spark session and configuration using SparkConf object
