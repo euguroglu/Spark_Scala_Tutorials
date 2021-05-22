@@ -18,7 +18,7 @@ object _01RDD extends Serializable {
     }
 
     //Create Spark Context
-    val sparkAppConf = new SparkConf().setAppName("RDD").setMaster("local[3]")
+    val sparkAppConf = new SparkConf().setAppName("RDD").setMaster("yarn")
     //Create Spark Context
     val sparkContext = new SparkContext(sparkAppConf)
 
