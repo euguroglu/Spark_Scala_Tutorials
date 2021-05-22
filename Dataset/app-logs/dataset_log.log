@@ -1,0 +1,4 @@
+21/05/22 22:52:39 INFO Dataset$: Starting DataSet Example
+21/05/22 22:52:50 INFO Dataset$: DataFrame: [United States,4],[Canada,2],[United Kingdom,1]
+21/05/22 22:52:50 INFO Dataset$: DataSet:(United States,4),(Canada,2),(United Kingdom,1)
+21/05/22 22:52:50 INFO Dataset$: Finished DataSet Spark Example
