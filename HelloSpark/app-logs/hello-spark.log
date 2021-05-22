@@ -1,4 +1,7 @@
-21/05/21 23:05:27 INFO _01SparkTransformations_B_functional_approach$: Starting Hello Spark
-21/05/21 23:05:38 INFO _01SparkTransformations_B_functional_approach$: [United Kingdom,1]->[Canada,2]->[United States,4]
-21/05/21 23:05:38 INFO _01SparkTransformations_B_functional_approach$: spark.conf=Map(spark.driver.host -> ENES, spark.driver.port -> 26979, spark.app.name -> Hello Spark, spark.executor.id -> driver, spark.yarn.app.container.log.dir -> app-logs, spark.master -> local[3], spark.app.id -> local-1621627533470, spark.sql.shuffle.partitions -> 2)
-21/05/21 23:05:38 INFO _01SparkTransformations_B_functional_approach$: Finished Hello Spark
+21/05/22 15:21:52 INFO _03SparkTransformations_C_Foreach$: Starting Hello Spark
+21/05/22 15:23:13 INFO _03SparkTransformations_C_Foreach$: Country: United KingdomCount: 1
+21/05/22 15:23:17 INFO _03SparkTransformations_C_Foreach$: Country: CanadaCount: 2
+21/05/22 15:23:21 INFO _03SparkTransformations_C_Foreach$: Country: United StatesCount: 4
+21/05/22 15:23:21 INFO _03SparkTransformations_C_Foreach$: [United Kingdom,1]->[Canada,2]->[United States,4]
+21/05/22 15:23:21 INFO _03SparkTransformations_C_Foreach$: spark.conf=Map(spark.driver.host -> ENES, spark.driver.port -> 51477, spark.app.name -> Hello Spark, spark.executor.id -> driver, spark.yarn.app.container.log.dir -> app-logs, spark.master -> local[3], spark.app.id -> local-1621686118850, spark.sql.shuffle.partitions -> 2)
+21/05/22 15:23:21 INFO _03SparkTransformations_C_Foreach$: Finished Hello Spark

@@ -41,6 +41,10 @@ object _03SparkTransformations_C_Foreach extends Serializable {
 
     val countDf = countByCountry(partitionedsurveyDf)
 
+    countDf.foreach(row => {
+      logger.info("Country: " + row.getString(0) + "Count: " + row.getLong(1))
+    })
+
     logger.info(countDf.collect().mkString("->"))
     countDf.show()
 
@@ -50,7 +54,7 @@ object _03SparkTransformations_C_Foreach extends Serializable {
     // Below code is work around to observe sparkui because
     // That code will does not allow spark session to finish
     // Remove this code later, this is debugging only
-    scala.io.StdIn.readLine()
+    //scala.io.StdIn.readLine()
     spark.stop()
   }
 
