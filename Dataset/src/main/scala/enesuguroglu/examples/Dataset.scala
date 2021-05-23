@@ -20,7 +20,7 @@ object Dataset extends Serializable {
     //Create Spark Session
     val spark = SparkSession.builder()
       .appName("Hello Dataset")
-      .master("local[3]")
+      .master("yarn")
       .getOrCreate()
 
     //Read csv file

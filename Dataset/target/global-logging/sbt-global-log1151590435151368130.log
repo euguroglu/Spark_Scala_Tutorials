@@ -1,0 +1,9 @@
+[debug] > Exec({file:/C:/Users/PC/Documents/Jupyter/Udemy/Spark_Scala/Program/Dataset/}dataset/package, None, None)
+[debug] Evaluating tasks: Compile / package
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\Dataset\target\scala-2.12\classes ...
+[info] done compiling
+[success] Total time: 4 s, completed 22.May.2021 23:10:00
+[debug] > Exec(idea-shell, None, None)
+[debug] > Exec(, None, None)
+[debug] > Exec(idea-shell, None, None)

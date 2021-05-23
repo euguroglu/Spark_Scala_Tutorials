@@ -1,0 +1,20 @@
+[debug] Created transactional ClassFileManager with tempDir = C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\Dataset\target\scala-2.12\classes.bak
+[debug] About to delete class files:
+[debug] 	Dataset.class
+[debug] 	Dataset$.class
+[debug] 	Dataset$$typecreator4$1.class
+[debug] 	SurveyRecord.class
+[debug] 	SurveyRecord$.class
+[debug] We backup class files:
+[debug] 	Dataset.class
+[debug] 	Dataset$.class
+[debug] 	Dataset$$typecreator4$1.class
+[debug] 	SurveyRecord.class
+[debug] 	SurveyRecord$.class
+[debug] Registering generated classes:
+[debug] 	Dataset.class
+[debug] 	Dataset$.class
+[debug] 	Dataset$$typecreator4$1.class
+[debug] 	SurveyRecord.class
+[debug] 	SurveyRecord$.class
+[debug] Removing the temporary directory used for backing up class files: C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\Dataset\target\scala-2.12\classes.bak
