@@ -37,6 +37,14 @@ object DataSink extends Serializable {
       .option("path", "dataSink/avro/")
       .save()
 
+    partitioneddf.write
+      .format("json")
+      .mode(SaveMode.Overwrite)
+      .option("path", "dataSink/json/")
+      .partitionBy("OP_CARRIER", "ORIGIN")
+      .option("maxRecordsPerFile", 10000)
+      .save()
+
     logger.info("Finished Partitioning")
     spark.stop()
 
