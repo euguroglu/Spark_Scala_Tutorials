@@ -12,7 +12,7 @@ object DataSink extends Serializable {
     // Create Spark Session
     val spark = SparkSession.builder()
       .appName("Spark Schema Demo")
-      .master("local[3]")
+      .master("yarn")
       .getOrCreate()
 
     // Read parquet data from the folder

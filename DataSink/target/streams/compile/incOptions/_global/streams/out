@@ -1,0 +1,7 @@
+[debug] Created transactional ClassFileManager with tempDir = C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\DataSink\target\scala-2.12\classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Registering generated classes:
+[debug] 	DataSink$.class
+[debug] 	DataSink.class
+[debug] Removing the temporary directory used for backing up class files: C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\DataSink\target\scala-2.12\classes.bak
