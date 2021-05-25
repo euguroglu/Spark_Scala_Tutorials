@@ -1,0 +1,11 @@
+[debug] Packaging C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\SparkSQL\target\scala-2.12\sparksql_2.12-0.1.jar ...
+[debug] Input file mappings:
+[debug] 	enesuguroglu
+[debug] 	  C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\SparkSQL\target\scala-2.12\classes\enesuguroglu
+[debug] 	enesuguroglu\examples
+[debug] 	  C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\SparkSQL\target\scala-2.12\classes\enesuguroglu\examples
+[debug] 	enesuguroglu\examples\SparkSQL$.class
+[debug] 	  C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\SparkSQL\target\scala-2.12\classes\enesuguroglu\examples\SparkSQL$.class
+[debug] 	enesuguroglu\examples\SparkSQL.class
+[debug] 	  C:\Users\PC\Documents\Jupyter\Udemy\Spark_Scala\Program\SparkSQL\target\scala-2.12\classes\enesuguroglu\examples\SparkSQL.class
+[debug] Done packaging.

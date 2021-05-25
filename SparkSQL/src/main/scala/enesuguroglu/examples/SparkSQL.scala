@@ -10,8 +10,9 @@ object SparkSQL extends Serializable {
 
     val spark = SparkSession.builder()
       .appName("Spark SQL Table")
-      .master("local[3]")
+      .master("yarn")
       .enableHiveSupport()
+      .config("spark.sql.warehouse.dir","/user/hive/warehouse")
       .getOrCreate()
 
     logger.info("Reading from dataSource")
